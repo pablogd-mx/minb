@@ -1,0 +1,11 @@
+version: 0.1
+log:
+  level: debug
+storage:
+  filesystem: {}
+http:
+  addr: :5002
+  secret: secret
+  tls:
+    certificate: /certs/domain.crt
+    key: /certs/domain.key
