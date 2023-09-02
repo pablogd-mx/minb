@@ -68,8 +68,7 @@ for ((i=1; i<=$num_clusters; i++)); do
 }
 install_mx4pc_standalone() {
 
-read -p "Enter the version of MxOperator to install: " mxversion
-
+read -p "Enter the version of MxOperator to install:" mxversion
 echo "Installing PostgresSQL"
         helm repo add bitnami https://charts.bitnami.com/bitnami
         kubectl create namespace pmp-storage
@@ -77,20 +76,26 @@ echo "Installing PostgresSQL"
     
     # Install Minio using Helm  
     echo "Installing Minio Storage"
-        helm install minio-shared bitnami/minio --namespace=pmp-storage --set auth.rootUser=minioadmin --set auth.rootPassword=Password1\! --set persistence.size=5Gi   
+        helm install minio-shared bitnami/minio --namespace=pmp-storage --set auth.rootUser=minioadmin --set auth.rootPassword=Password1\! --set persistence.size=1Gi   
     
-echo "Installing Local Registry"
-   
+    # echo "Installing Ngnix"
+    # kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/kind/deploy.yaml
+
+
+    echo "Installing and configuring MetalLB"
+    kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+    kubectl apply -f config/metallb_pool.yaml
 
     # Install Mx4PC Operator ( Standalone)
      echo "Installing Mx4PC Operator (Standalone)"
      wget -c https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-$mxversion.0-macos-amd64.tar.gz 
      tar -zxvf mxpc-cli*
      chmod +x *mxpc-cli
+     sleep 2
      ./mxpc-cli base-install -n $namespace_name -t generic -m standalone
-     
+     sleep 3
     # Configure Mx4PC Operator
-    ./mxpc-cli apply-config -f config/ns_config.yaml
+    # ./mxpc-cli apply-config -f config/ns_config.yaml
     rm -rf mxpc-cli*
     echo " *********************"
 
@@ -106,8 +111,7 @@ echo "Installing Local Registry"
 
 deploy_test_app() {
    sleep 10 # Wait for Minio and Postgres to be ready
-   kubectl apply -f config/app_cr.yaml -n pmp-ns-1 #TODO
-
+   kubectl apply -f config/app_cr.yaml
 }
 
 delete_all_kind_clusters() {

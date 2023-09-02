@@ -29,15 +29,11 @@ storage_plan:
     accesskey: minioadmin
     secretkey: Password1!
 ingress:
-  type: kubernetes-ingress
+  type: service-only
   enable_tls: false
-  k8s_ingress:
-    domain: gomakeit.com
-    useCustomIngressClass: true
-    customIngressClass: nginx
-    customIngressClassAsAnnotation: true
-    path: /
-  service: null
+  k8s_ingress: null
+  service:
+    type: LoadBalancer
 registry:
   type: generic
   generic_registry:
