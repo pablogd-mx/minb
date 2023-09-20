@@ -1,0 +1,471 @@
+2023-09-01T07:13:25Z	INFO	controller-runtime.metrics	Metrics server is starting to listen	{"addr": ":8080"}
+2023-09-01T07:13:25Z	INFO	setup	starting manager
+I0901 07:13:25.141551       1 pclm.go:161] "pclm_manager: License Manager claim scheduler is initialised"
+I0901 07:13:25.141561       1 pclm.go:191] "pclm_manager: License Manager expired licenses replacement scheduler is initialised"
+2023-09-01T07:13:25Z	INFO	Starting server	{"path": "/metrics", "kind": "metrics", "addr": "[::]:8080"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "build", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Build", "source": "kind source: *v1alpha1.Build"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "build", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Build", "source": "kind source: *v1.Pod"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "build", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Build"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "storageinstance", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "StorageInstance", "source": "kind source: *v1alpha1.StorageInstance"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.MendixApp"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "storageinstance", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "StorageInstance", "source": "kind source: *v1.Pod"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.StorageInstance"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "storageinstance", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "StorageInstance", "source": "kind source: *v1.Secret"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.Build"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "storageinstance", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "StorageInstance"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint", "source": "kind source: *v1alpha1.Endpoint"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint", "source": "kind source: *v1.Ingress"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "operatorversion", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "OperatorVersion", "source": "kind source: *v1alpha1.OperatorVersion"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "operatorversion", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "OperatorVersion"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.Runtime"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.Endpoint"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "source": "kind source: *v1alpha1.OperatorVersion"}
+2023-09-01T07:13:25Z	INFO	Starting server	{"kind": "health probe", "addr": "[::]:8081"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint", "source": "kind source: *v1.Service"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint", "source": "kind source: *v1.Secret"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "source": "kind source: *v1alpha1.Runtime"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "source": "kind source: *v1.Deployment"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "source": "kind source: *v1.Secret"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "source": "kind source: *v1.ConfigMap"}
+2023-09-01T07:13:25Z	INFO	Starting EventSource	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "source": "kind source: *v1.Service"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime"}
+2023-09-01T07:13:25Z	INFO	Starting Controller	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp"}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "operatorversion", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "OperatorVersion", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "runtime", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Runtime", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	controller_operatorversion	Reconciling OperatorVersion	{"Request.Namespace": "pmp-ns-1", "Request.Name": "mendix-operator-version"}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "endpoint", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Endpoint", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "build", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "Build", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "storageinstance", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "StorageInstance", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	Starting workers	{"controller": "mendixapp", "controllerGroup": "privatecloud.mendix.com", "controllerKind": "MendixApp", "worker count": 1}
+2023-09-01T07:13:25Z	INFO	controller_operatorversion	Reconciling OperatorVersion	{"Request.Namespace": "pmp-ns-1", "Request.Name": "mendix-operator-version"}
+2023-09-01T07:13:25Z	DEBUG	events	Successfully updated version state	{"type": "Normal", "object": {"kind":"OperatorVersion","namespace":"pmp-ns-1","name":"mendix-operator-version","uid":"3acce4e2-8268-4375-8063-c47f8732f001","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"801"}, "reason": "SuccessfulOperatorVersion"}
+2023-09-01T07:13:25Z	DEBUG	events	Successfully updated version state	{"type": "Normal", "object": {"kind":"OperatorVersion","namespace":"pmp-ns-1","name":"mendix-operator-version","uid":"3acce4e2-8268-4375-8063-c47f8732f001","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"801"}, "reason": "SuccessfulOperatorVersion"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1377"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Creating a new StorageInstance	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Creating a new StorageInstance	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:12Z	DEBUG	events	reconcile StorageInstance create successful	{"type": "Normal", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1377"}, "reason": "SuccessfulStorageInstance"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Creating a new Endpoint	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	reconcile StorageInstance create successful	{"type": "Normal", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1377"}, "reason": "SuccessfulStorageInstance"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Creating a new Build	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	reconcile Endpoint create successful	{"type": "Normal", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1377"}, "reason": "SuccessfulEndpoint"}
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Reconciling Endpoint	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Creating a new Service	{"Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp", "Service.Namespace": "pmp-ns-1", "Service.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	reconcile Build create successful	{"type": "Normal", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1377"}, "reason": "SuccessfulBuild"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_build	Creating a new Pod	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1389"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	DEBUG	events	reconcile Service create successful	{"type": "Normal", "object": {"kind":"Endpoint","namespace":"pmp-ns-1","name":"testapp","uid":"28b1fe02-2ce4-4c20-a287-52771088ee69","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1382"}, "reason": "SuccessfulService"}
+2023-09-01T07:18:12Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1392"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Reconciling Endpoint	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Service already exists	{"Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp", "Service.Namespace": "pmp-ns-1", "Service.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1392"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	ERROR	controller_endpoint	Failed to update Endpoint status	{"Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp", "error": "Operation cannot be fulfilled on endpoints.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint.(*EndpointReconciler).updateStatus
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint/endpoint_controller.go:268
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint.(*EndpointReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint/endpoint_controller.go:113
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint.(*EndpointReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint/endpoint_controller.go:168
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	ERROR	controller_endpoint	Failed to update Endpoint state	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "error": "Operation cannot be fulfilled on endpoints.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint.(*EndpointReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint/endpoint_controller.go:114
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint.(*EndpointReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/endpoint/endpoint_controller.go:168
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Reconciling Endpoint	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_endpoint	Service already exists	{"Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp", "Service.Namespace": "pmp-ns-1", "Service.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1392"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:12Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	ERROR	controller_mendixapp	Failed to update MendixApp status	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "error": "Operation cannot be fulfilled on mendixapps.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).updateStatus
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:426
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:127
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:379
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	ERROR	controller_mendixapp	Failed to update MendixApp state	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "error": "Operation cannot be fulfilled on mendixapps.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:128
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:379
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1402"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1407"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Creating a new Pod	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-database"}
+2023-09-01T07:18:12Z	DEBUG	events	creating Provisioner pod	{"type": "Normal", "object": {"kind":"StorageInstance","namespace":"pmp-ns-1","name":"testapp-database","uid":"f810e0ef-4844-48bb-8f55-5a432ca1f0df","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1378"}, "reason": "ProgressingStorage"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1407"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Creating a new Pod	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-file"}
+2023-09-01T07:18:12Z	DEBUG	events	creating Provisioner pod	{"type": "Normal", "object": {"kind":"StorageInstance","namespace":"pmp-ns-1","name":"testapp-file","uid":"78d7a170-8397-4368-8527-8964363587e3","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1381"}, "reason": "ProgressingStorage"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1417"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1417"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1426"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1426"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	ERROR	controller_mendixapp	Failed to update MendixApp status	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "error": "Operation cannot be fulfilled on mendixapps.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).updateStatus
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:426
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:127
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:379
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	ERROR	controller_mendixapp	Failed to update MendixApp state	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "error": "Operation cannot be fulfilled on mendixapps.privatecloud.mendix.com \"testapp\": the object has been modified; please apply your changes to the latest version and try again"}
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile.func1
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:128
+gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp.(*MendixAppReconciler).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/controllers/mendixapp/mendixapp_controller.go:379
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:122
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:323
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:274
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/usr/src/gitlab.rnd.mendix.com/digital_ecosystems/mendix-operator/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:235
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1430"}, "reason": "TrialLicense"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:12Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1434"}, "reason": "TrialLicense"}
+2023-09-01T07:18:13Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Waiting for Database	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:13Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1434"}, "reason": "TrialLicense"}
+2023-09-01T07:18:13Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:15Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:15Z	DEBUG	events	storage provisioned	{"type": "Normal", "object": {"kind":"StorageInstance","namespace":"pmp-ns-1","name":"testapp-database","uid":"f810e0ef-4844-48bb-8f55-5a432ca1f0df","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1424"}, "reason": "SuccessfulStorage"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:15Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:15Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1434"}, "reason": "TrialLicense"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_storageinstance	Provisioner pod is no longer needed, deleting	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:15Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1462"}, "reason": "TrialLicense"}
+2023-09-01T07:18:17Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:17Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1462"}, "reason": "TrialLicense"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:17Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1473"}, "reason": "TrialLicense"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Waiting for File Storage	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:17Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:18Z	DEBUG	events	storage provisioned	{"type": "Normal", "object": {"kind":"StorageInstance","namespace":"pmp-ns-1","name":"testapp-file","uid":"78d7a170-8397-4368-8527-8964363587e3","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1471"}, "reason": "SuccessfulStorage"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Provisioner pod is no longer needed, deleting	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1473"}, "reason": "TrialLicense"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Waiting for Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:18Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1484"}, "reason": "TrialLicense"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Provisioner pod is no longer needed, deleting	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:18Z	INFO	controller_storageinstance	Reconciling StorageInstance	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp-file"}
+2023-09-01T07:18:19Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_build	Skip reconcile: Pod already exists	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp", "Pod.Namespace": "pmp-ns-1", "Pod.Name": "testapp-build"}
+2023-09-01T07:18:19Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:19Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1484"}, "reason": "TrialLicense"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_build	Skip reconcile: Build already up to date	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_build	Reconciling Build	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_build	Skip reconcile: Build already up to date	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Reconciling MendixApp	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	License not configured, operator will run in trial mode
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	License server is not configured, runtime will run in trial mode
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-database"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	StorageInstance already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "StorageInstance.Namespace": "pmp-ns-1", "StorageInstance.Name": "testapp-file"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Endpoint already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Endpoint.Namespace": "pmp-ns-1", "Endpoint.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Build already exists	{"MendixApp.Namespace": "pmp-ns-1", "MendixApp.Name": "testapp", "Build.Namespace": "pmp-ns-1", "Build.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Resources are not ready, Runtime will not be reconciled	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	INFO	controller_mendixapp	Runtime doesn't exist yet	{"Request.Namespace": "pmp-ns-1", "Request.Name": "testapp"}
+2023-09-01T07:18:19Z	DEBUG	events	app is running in trial mode	{"type": "Warning", "object": {"kind":"MendixApp","namespace":"pmp-ns-1","name":"testapp","uid":"89808376-079a-457b-891b-21cc7dfcc81d","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"1494"}, "reason": "TrialLicense"}
+I0901 07:18:25.142304       1 pclm.go:168] "pclm_manager: Starting license claim scheduler" LicenseClaimRenewalPeriod="5m0s"
+I0901 07:18:25.155409       1 pclm.go:174] "pclm_manager: License manager scheduler failed to load config" Error="server configuration is undefined"
+I0901 07:18:25.155445       1 pclm.go:175] "pclm_manager: Finished license claim scheduler" ElapsedTime="394.625µs"
+2023-09-01T07:18:25Z	INFO	controller_operatorversion	Reconciling OperatorVersion	{"Request.Namespace": "pmp-ns-1", "Request.Name": "mendix-operator-version"}
+2023-09-01T07:18:25Z	DEBUG	events	Successfully updated version state	{"type": "Normal", "object": {"kind":"OperatorVersion","namespace":"pmp-ns-1","name":"mendix-operator-version","uid":"3acce4e2-8268-4375-8063-c47f8732f001","apiVersion":"privatecloud.mendix.com/v1alpha1","resourceVersion":"801"}, "reason": "SuccessfulOperatorVersion"}

@@ -84,7 +84,8 @@ echo "Installing PostgresSQL"
 
     echo "Installing and configuring MetalLB"
     kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
-    kubectl apply -f config/metallb_pool.yaml
+    ./config/metallb-config.sh
+    kubectl apply -f ./config/metallb-config.yaml
 
     # Install Mx4PC Operator ( Standalone)
      echo "Installing Mx4PC Operator (Standalone)"
@@ -95,12 +96,13 @@ echo "Installing PostgresSQL"
      ./mxpc-cli base-install -n $namespace_name -t generic -m standalone
      sleep 3
     # Configure Mx4PC Operator
-    # ./mxpc-cli apply-config -f config/ns_config.yaml
+     ./mxpc-cli apply-config -f config/ns_config.yaml
     rm -rf mxpc-cli*
     echo " *********************"
 
     # Configure Registry
     ./config/configure_registry.sh
+    sleep 5
 
     echo " Database endpoint is: postgres-shared-postgresql.pmp-storage.svc.cluster.local:5432. Check secrets for credentials"
     echo " Storage endpoint is: http://minio-shared.pmp-storage.svc.cluster.local:9000. Check secrets for credentials"
@@ -111,7 +113,7 @@ echo "Installing PostgresSQL"
 
 deploy_test_app() {
    sleep 10 # Wait for Minio and Postgres to be ready
-   kubectl apply -f config/app_cr.yaml
+   kubectl apply -f config/app_cr.yaml -n $namespace_name
 }
 
 delete_all_kind_clusters() {
