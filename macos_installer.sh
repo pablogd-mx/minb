@@ -72,7 +72,7 @@ read -p "Enter the version of MxOperator to install:" mxversion
 echo "Installing PostgresSQL"
         helm repo add bitnami https://charts.bitnami.com/bitnami
         kubectl create namespace pmp-storage
-        helm install postgres-shared bitnami/postgresql --namespace=pmp-storage --set auth.postgresPassword=Password1\! --set image.tag=12 --set persistence.size=1Gi
+        helm install postgres-shared bitnami/postgresql --namespace=pmp-storage --set auth.postgresPassword=Password1\! --set persistence.size=1Gi
     
     # Install Minio using Helm  
     echo "Installing Minio Storage"
@@ -83,20 +83,22 @@ echo "Installing PostgresSQL"
 
 
     echo "Installing and configuring MetalLB"
-    kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+    # kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+    # #./config/metallb-config.sh
+    # kubectl apply -f ./config/metallb-config.yaml
     ./config/metallb-config.sh
-    kubectl apply -f ./config/metallb-config.yaml
 
-    # Install Mx4PC Operator ( Standalone)
-     echo "Installing Mx4PC Operator (Standalone)"
+    # Install Mx4PC Operator ( Connected)
+     echo "Installing Mx4PC Operator (Connected)"
      wget -c https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-$mxversion.0-macos-amd64.tar.gz 
      tar -zxvf mxpc-cli*
      chmod +x *mxpc-cli
      sleep 2
-     ./mxpc-cli base-install -n $namespace_name -t generic -m standalone
+     #./mxpc-cli base-install -n $namespace_name -t generic -m con
+     ./mxpc-cli base-install -n $namespace_name -t generic -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -m connected
      sleep 3
     # Configure Mx4PC Operator
-     ./mxpc-cli apply-config -f config/ns_config.yaml
+     #./mxpc-cli apply-config -f mx_config_cli_2.yaml 
     rm -rf mxpc-cli*
     echo " *********************"
 
@@ -113,7 +115,7 @@ echo "Installing PostgresSQL"
 
 deploy_test_app() {
    sleep 10 # Wait for Minio and Postgres to be ready
-   kubectl apply -f config/app_cr.yaml -n $namespace_name
+   kubectl apply -n $namespace_name -f config/app_cr.yaml 
 }
 
 delete_all_kind_clusters() {

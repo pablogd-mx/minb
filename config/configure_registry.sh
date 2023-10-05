@@ -13,37 +13,6 @@ if [ "$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true
 fi
 
 
-# Create kind cluster with containerd registry config dir enabled
-# TODO: kind will eventually enable this by default and this patch will
-# be unnecessary.
-#
-# See:
-# https://github.com/kubernetes-sigs/kind/issues/2875
-# https://github.com/containerd/containerd/blob/main/docs/cri/config.md#registry-configuration
-# See: https://github.com/containerd/containerd/blob/main/docs/hosts.md
-# cat <<EOF | kind create cluster --config=-
-# kind: Cluster
-# apiVersion: kind.x-k8s.io/v1alpha4
-# containerdConfigPatches:
-# - |-
-#   [plugins."io.containerd.grpc.v1.cri".registry]
-#     config_path = "/etc/containerd/certs.d"
-# nodes:
-# - role: control-plane
-#   kubeadmConfigPatches:
-#   - |
-#     kind: InitConfiguration
-#     nodeRegistration:
-#       kubeletExtraArgs:
-#         node-labels: "ingress-ready=true"
-#   extraPortMappings:
-#   - containerPort: 80
-#     hostPort: 80
-#     protocol: TCP
-#   - containerPort: 443
-#     hostPort: 443
-#     protocol: TCP
-# EOF
 
 # 3. Add the registry config to the nodes
 #

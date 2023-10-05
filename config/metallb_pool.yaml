@@ -1,3 +1,9 @@
+#!/bin/bash
+# Determine Docker's subnet
+DOCKER_SUBNET=$(docker network inspect -f '{{range .IPAM.Config}}{{.Subnet}}{{end}}' bridge)
+# Create a ConfigMap for MetalLB
+cat <<EOF > metallb-config.yaml
+
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
@@ -5,10 +11,11 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 172.17.255.1-172.17.255.250
+  - 172.17.255.100-172.17.255.250
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: config
   namespace: metallb-system
+EOF

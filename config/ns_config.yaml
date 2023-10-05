@@ -1,5 +1,5 @@
 namespace: pmp-ns-1
-cluster_mode: standalone
+cluster_mode: connected
 mask:
   database_plan: true
   storage_plan: true
@@ -39,6 +39,6 @@ registry:
   generic_registry:
     auth_pull_url: localhost:5001
     auth_push_url: kind-registry.local:5000
-    registry_name: pmp
+    registry_name: registry
     enable_auth: false
     link_secret_to_service_account: false

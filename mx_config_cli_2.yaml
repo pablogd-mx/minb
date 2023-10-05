@@ -4,7 +4,7 @@ mask:
   database_plan: true
   storage_plan: true
   ingress: true
-  registry: false
+  registry: true
   proxy: false
   custom_tls: false
 database_plan:
@@ -29,23 +29,16 @@ storage_plan:
     accesskey: minioadmin
     secretkey: Password1!
 ingress:
-  type: kubernetes-ingress
+  type: service-only
   enable_tls: false
-  k8s_ingress:
-    domain: mx4pc.nl
-    useCustomIngressClass: true
-    customIngressClass: nginx
-    customIngressClassAsAnnotation: true
-    path: /
-  service: null
+  k8s_ingress: null
+  service:
+    type: LoadBalancer
 registry:
   type: generic
   generic_registry:
     auth_pull_url: localhost:5001
-    auth_push_url: kind-registry:5000
+    auth_push_url: kind-registry.local:5000
     registry_name: registry
     enable_auth: false
     link_secret_to_service_account: false
-custom_tls:
-  ca_certificates_secret_name: registry-secret
-  namespace: pmp-ns
