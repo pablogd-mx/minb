@@ -1,3 +1,5 @@
+isGlobalOperator: false
+operatorNamespace: ""
 namespace: pmp-ns
 cluster_mode: connected
 mask:
@@ -8,7 +10,7 @@ mask:
   proxy: false
   custom_tls: false
 database_plan:
-  name: post-db
+  name: post-linux-db
   type: postgres
   postgres:
     databaseprops:
@@ -22,7 +24,7 @@ database_plan:
     aws_iam_role: ""
     kubernetes_service_account: ""
 storage_plan:
-  name: minio-st
+  name: minio-linux-st
   type: minio
   minio:
     endpoint: http://minio-shared.pmp-storage.svc.cluster.local:9000
@@ -39,6 +41,6 @@ registry:
   generic_registry:
     auth_pull_url: localhost:5001
     auth_push_url: kind-registry.local:5000
-    registry_name: registry
+    registry_name: pmp
     enable_auth: false
     link_secret_to_service_account: false

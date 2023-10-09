@@ -90,15 +90,15 @@ echo "Installing PostgresSQL"
 
     # Install Mx4PC Operator ( Connected)
      echo "Installing Mx4PC Operator (Connected)"
-     wget -c https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-$mxversion.0-macos-amd64.tar.gz 
+     wget -c https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli/mxpc-cli-$mxversion.0-linux-amd64.tar.gz 
      tar -zxvf mxpc-cli*
      chmod +x *mxpc-cli
      sleep 2
      #./mxpc-cli base-install -n $namespace_name -t generic -m con
-     ./mxpc-cli base-install -n $namespace_name -t generic -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -m connected
+     ./mxpc-cli base-install -n pmp-ns -t generic -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -m connected
      sleep 3
     # Configure Mx4PC Operator
-     #./mxpc-cli apply-config -f mx_config_cli_2.yaml 
+     ./mxpc-cli apply-config -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -f config/minb_config_ok_service.yaml
     rm -rf mxpc-cli*
     echo " *********************"
 
