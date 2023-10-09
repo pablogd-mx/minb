@@ -1,4 +1,4 @@
-namespace: pmp-ns-1
+namespace: pmp-ns
 cluster_mode: connected
 mask:
   database_plan: true
