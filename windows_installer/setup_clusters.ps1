@@ -1,53 +1,92 @@
 function Install-Prerequisites {
-    Write-Host "Installing prerequisites..."
-    # Install KinD
-    & go install sigs.k8s.io/kind@v0.11.1
+    if (-Not (Test-Path -Path "C:\Program Files\Docker\Docker\Docker Desktop.exe" -PathType Leaf)) {
+        Write-Host "Installing Docker for Windows..."
 
-    # Install Helm
-    Invoke-WebRequest -Uri https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 -OutFile get_helm.ps1
-    & ./get_helm.ps1
+        if (-Not (Get-Command -Name 'choco' -ErrorAction SilentlyContinue)) {
+            Write-Host "Chocolatey not found. Installing Chocolatey..."
+            Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+        }
 
-
-   # Check if Docker is installed
-   Write-Host " Check if docker is installed"
-    if (-not (Test-Path (Join-Path $env:ProgramFiles "Docker\Docker\Docker Desktop.exe"))) {
-        Write-Host "Docker is not installed. Installing..."
-    
-        # Download and install Docker Desktop (assuming Windows)
-        Invoke-WebRequest -Uri https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe -OutFile DockerDesktopInstaller.exe
-        Start-Process -Wait -FilePath .\DockerDesktopInstaller.exe
-        Remove-Item .\DockerDesktopInstaller.exe
+        choco install docker-desktop -y
     }
-    
-    # Check if Docker is running
-    if ((docker info) -eq $null) {
-        Write-Host "Docker is not running. Starting..."
-        Start-Process -NoNewWindow -Wait -FilePath "C:\Program Files\Docker\Docker\Docker Desktop.exe"  # Adjust path if needed
-    } else {
-        Write-Host "Docker is already running."
+    else {
+        Write-Host "Docker already installed, skipping"
+    }
+
+   
+    if (-Not (Get-Command -Name 'kind' -ErrorAction SilentlyContinue)) {
+   
+        Write-Host "Installing KinD..."
+        choco install kind
+
+    }
+    else {
+        Write-Host "KinD already installed, skipping"
+    }
+
+   
+    if (-Not (Get-Command -Name 'helm' -ErrorAction SilentlyContinue)) {
+   
+        Write-Host "Installing Helm..."
+        choco install kubernetes-helm
+
+    }
+    else {
+        Write-Host "Helm already installed, skipping"
     }
 
     Write-Host "Prerequisites installed!"
 }
 
+
+
 function Create-Clusters {
     $numClusters = Read-Host "Enter the number of clusters to create"
-    1..$numClusters | ForEach-Object {
-        & kind create cluster --name "kind-cluster-$_"
+
+    for ($i = 1; $i -le $numClusters; $i++) {
+        $clusterName = "mx4pc-cluster-$i"
+        $namespaceName = "pmp-ns"
+        $HTTP_PORT = 8000 + $i
+        $HTTPS_PORT = 8443 + $i
+
+        Write-Host "Creating cluster: $clusterName"
+
+        # Create a KiND cluster using the config file with extra port mappings
+        $kindConfig = @"
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+containerdConfigPatches:
+- |-
+  [plugins."io.containerd.grpc.v1.cri".registry]
+    config_path = "/etc/containerd/certs.d"
+nodes:
+- role: control-plane
+  image: kindest/node:v1.23.17@sha256:59c989ff8a517a93127d4a536e7014d28e235fb3529d9fba91b3951d461edfdb
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "ingress-ready=true"
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: $HTTP_PORT
+    protocol: TCP
+  - containerPort: 443
+    hostPort: $HTTPS_PORT
+    protocol: TCP
+- role: worker
+  image: kindest/node:v1.23.17@sha256:59c989ff8a517a93127d4a536e7014d28e235fb3529d9fba91b3951d461edfdb
+"@
+
+        $kindConfig | Out-File -FilePath "kind-config.yaml" -Encoding UTF8
+        kind create cluster --name "cluster$i" --config=kind-config.yaml
+        Remove-Item -Path "kind-config.yaml"
+        Write-Host "Cluster $i created successfully!"
     }
 }
 
-function Install-NginxIngress {
-    Write-Host "Installing Nginx Ingress Controller..."
-    helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-    helm repo update
-    helm install nginx-ingress ingress-nginx/ingress-nginx
-}
-
-function Deploy-DockerRegistry {
-    Write-Host "Deploying Docker registry with TLS..."
-    # Deploy Docker registry with TLS here
-}
+# Other functions: install_mx4pc_standalone, deploy_test_app, delete_all_kind_clusters
 
 function Main-Menu {
     Clear-Host
@@ -55,18 +94,20 @@ function Main-Menu {
     Write-Host "Select an option:"
     Write-Host "1. Install prerequisites"
     Write-Host "2. Create KinD clusters"
-    Write-Host "3. Install Nginx Ingress Controller"
-    Write-Host "4. Deploy Docker registry with TLS"
-    Write-Host "5. Exit"
+    Write-Host "3. Install & Configure Mx4PC Standalone"
+    Write-Host "4. Deploy Test App"
+    Write-Host "5. Delete all clusters"
+    Write-Host "6. Exit"
 
     $choice = Read-Host "Enter your choice"
 
     switch ($choice) {
         1 { Install-Prerequisites }
         2 { Create-Clusters }
-        3 { Install-NginxIngress }
-        4 { Deploy-DockerRegistry }
-        5 { Write-Host "Exiting..." ; exit }
+        3 { Install-Mx4pc-Standalone }
+        4 { Deploy-Test-App }
+        5 { Delete-All-Kind-Clusters }
+        6 { Write-Host "Exiting..."; return }
         default { Write-Host "Invalid choice. Please select a valid option." }
     }
 
