@@ -59,9 +59,42 @@ create_clusters() {
   
 for ((i=1; i<=$num_clusters; i++)); do
     cluster_name="mx4pc-cluster-$i"
-    namespace_name="pmp-ns-$i"
+    namespace_name="pmp-ns"
+    HTTP_PORT=$((8000 + i))
+    HTTPS_PORT=$((8443 + i))
+
     echo "Creating cluster: $cluster_name"
-    sudo kind create cluster --name "$cluster_name" --config=config/cluster_config.yaml
+    # Create a KiND cluster using the config file with extra port mappings
+    cat <<EOF | sudo kind create cluster --name cluster${i} --config=-
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+containerdConfigPatches:
+- |-
+  [plugins."io.containerd.grpc.v1.cri".registry]
+    config_path = "/etc/containerd/certs.d"
+nodes:
+- role: control-plane
+  image: kindest/node:v1.23.17@sha256:59c989ff8a517a93127d4a536e7014d28e235fb3529d9fba91b3951d461edfdb
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "ingress-ready=true"
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: $HTTP_PORT
+    protocol: TCP
+  - containerPort: 443
+    hostPort: $HTTPS_PORT
+    protocol: TCP
+- role: worker
+  image: kindest/node:v1.23.17@sha256:59c989ff8a517a93127d4a536e7014d28e235fb3529d9fba91b3951d461edfdb
+EOF
+
+    # Add extra port mappings for ports 80 and 443 to the cluster
+    #echo "Creating cluster: $cluster_name"
+    #sudo kind create cluster --name "$cluster_name" --config=config/cluster_config.yaml
     
     echo "Cluster $i created successfully!"
  done
