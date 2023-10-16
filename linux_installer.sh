@@ -99,9 +99,15 @@ EOF
     echo "Cluster $i created successfully!"
  done
 }
-install_mx4pc_standalone() {
+install_mx4pc_connected() {
 
 read -p "Enter the version of MxOperator to install:" mxversion
+
+CLUSTERS=$(kind get clusters)
+
+for CLUSTER_NAME in $CLUSTERS; do
+    # Set the current context to the cluster
+kubectl config use-context $CLUSTER_NAME
 echo "Installing PostgresSQL"
         helm repo add bitnami https://charts.bitnami.com/bitnami
         kubectl create namespace pmp-storage
@@ -128,7 +134,7 @@ echo "Installing PostgresSQL"
      chmod +x *mxpc-cli
      sleep 2
      #./mxpc-cli base-install -n $namespace_name -t generic -m con
-     ./mxpc-cli base-install -n pmp-ns -t generic -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -m connected
+     ./mxpc-cli base-install -n connected-ns -t generic -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -m connected
      sleep 3
     # Configure Mx4PC Operator
      ./mxpc-cli apply-config -i 1e7990dd-806d-45b8-b4f8-36da10415d2b -s 19SGZQOQZsz02Csd -f config/minb_config_ok_service.yaml
@@ -143,12 +149,21 @@ echo "Installing PostgresSQL"
     echo " Storage endpoint is: http://minio-shared.pmp-storage.svc.cluster.local:9000. Check secrets for credentials"
     echo " Registry from the nodes is localhost:5001, from the Pods kind-registry.local:5001"
     echo " *********************"
-
+done
 }
 
-deploy_test_app() {
-   sleep 10 # Wait for Minio and Postgres to be ready
-   kubectl apply -n $namespace_name -f config/app_cr.yaml 
+install_mx4pc_standalone() {
+
+CLUSTERS=$(kind get clusters)
+for CLUSTER_NAME in $CLUSTERS; do
+
+    # Set the current context to the cluster
+    kubectl config use-context $CLUSTER_NAME
+   ./mxpc-cli base-install -n pmp-ns -t generic -m standalone
+   ./mxpc-cli apply-config -f config/ns_config_pmp
+
+done
+
 }
 
 delete_all_kind_clusters() {
@@ -187,10 +202,10 @@ main_menu() {
             create_clusters
             ;;
         3)
-            install_mx4pc_standalone
+            install_mx4pc_connected
             ;;
         4)
-            deploy_test_app
+            install_mx4pc_standalone
             ;;
         5) 
             delete_all_kind_clusters
