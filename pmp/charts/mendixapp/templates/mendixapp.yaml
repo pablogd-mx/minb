@@ -1,0 +1,89 @@
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  database:
+    servicePlan: {{ .Values.databaseServicePlan }}
+  storage:
+    servicePlan: {{ .Values.storageServicePlan }}
+  mendixRuntimeVersion: {{ .Values.mendixRuntimeVersion }}
+  sourceURL: {{ .Values.sourceURL }}
+  {{- if .Values.appURL }}
+  appURL: {{ .Values.appURL }}
+  {{- end }}
+  {{- if .Values.tls }}
+  tls:
+    {{- toYaml .Values.tls |  nindent 4 }}
+  {{- end }}
+  replicas: {{ .Values.replicas }}
+  {{- if .Values.resources }}
+  resources:
+    {{- toYaml .Values.resources | nindent 4 }}
+  {{- end }}
+  {{- if .Values.runtimeDeploymentPodAnnotations }}
+  runtimeDeploymentPodAnnotations:
+    {{- toYaml .Values.runtimeDeploymentPodAnnotations | nindent 4 }}
+  {{- end }}
+  {{- if .Values.serviceAnnotations }}
+  serviceAnnotations:
+    {{- toYaml .Values.serviceAnnotations | nindent 4 }}
+  {{- end }}
+  {{- if .Values.endpointAnnotations }}
+  endpointAnnotations:
+    {{- toYaml .Values.endpointAnnotations | nindent 4 }}
+  {{- end }}
+  {{- if .Values.ingressClassName }}
+  ingressClassName: {{ .Values.ingressClassName }}
+  {{- end }}
+  {{- if .Values.ingressPath }}
+  ingressPath: {{ .Values.ingressPath }}
+  {{- end }}
+  {{- if .Values.ingressPathType }}
+  ingressPathType: {{ .Values.ingressPathType }}
+  {{- end }}
+  runtime:
+    logAutosubscribeLevel: {{ .Values.logAutosubscribeLevel | default "INFO" }}
+    mxAdminPassword: {{ .Values.mxAdminPassword | b64enc }}
+    {{- if .Values.debuggerPassword }}
+    debuggerPassword: {{ .Values.debuggerPassword | b64enc }}
+    {{- end }}
+    dtapMode: {{ .Values.dtapMode }}
+    {{- if .Values.logLevels }}
+    logLevels:
+      {{- toYaml .Values.logLevels | nindent 6 }}
+    {{- end }}
+    {{- with .Values.microflowConstants }}
+    microflowConstants:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    scheduledEventExecution: {{ .Values.scheduledEventExecution | default "NONE" }}
+    {{- if eq .Values.scheduledEventExecution "SPECIFIED" }}
+    {{- with .Values.myScheduledEvents }}
+    myScheduledEvents: 
+      {{- toYaml . | nindent 6 }}
+    {{- end }}  
+    {{- end }}
+    {{- with .Values.jettyOptions }}
+    jettyOptions: |-
+      {{- . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.environmentVariables }}
+    environmentVariables:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.clientCertificates }}
+    clientCertificates:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.customConfiguration }}
+    customConfiguration: |-
+      {{- . | nindent 6 }}
+    {{- end }}
+  {{- with .Values.runtimeMetricsConfiguration }}
+  runtimeMetricsConfiguration:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- if .Values.runtimeLeaderSelection }}
+  runtimeLeaderSelection: {{ .Values.runtimeLeaderSelection }}
+  {{- end }}

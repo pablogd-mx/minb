@@ -1,0 +1,100 @@
+jivaOperator:
+  componentName: "jiva-operator"
+  controller:
+    image:
+      registry: ${registry_docker}/ # default empty
+      repository: openebs/jiva
+      tag: 3.4.0
+  replica:
+    image:
+      registry: ${registry_docker}/ # default empty
+      repository: openebs/jiva
+      tag: 3.4.0
+  exporter:
+    image:
+      registry: ${registry_docker}/ # default empty
+      repository: openebs/m-exporter
+      tag: 3.4.0
+  image:
+    # Make sure that registry name end with a '/'.
+    # For example : quay.io/ is a correct value here and quay.io is incorrect
+    registry: ${registry_docker}/ # default empty
+    repository: openebs/jiva-operator
+
+csiController:
+  attacher:
+    name: "csi-attacher"
+    image:
+      # Make sure that registry name end with a '/'.
+      # For example : quay.io/ is a correct value here and quay.io is incorrect
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/csi-attacher
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v4.3.0
+  livenessprobe:
+    name: "liveness-probe"
+    image:
+      # Make sure that registry name end with a '/'.
+      # For example : quay.io/ is a correct value here and quay.io is incorrect
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/livenessprobe
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v2.10.0
+  provisioner:
+    name: "csi-provisioner"
+    image:
+      # Make sure that registry name end with a '/'.
+      # For example : quay.io/ is a correct value here and quay.io is incorrect
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/csi-provisioner
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v3.5.0
+  resizer:
+    name: "csi-resizer"
+    image:
+      # Make sure that registry name end with a '/'.
+      # For example : quay.io/ is a correct value here and quay.io is incorrect
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/csi-resizer
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v1.8.0
+
+csiNode:
+  driverRegistrar:
+    name: "csi-node-driver-registrar"
+    image:
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/csi-node-driver-registrar
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v2.8.0
+  livenessprobe:
+    name: "liveness-probe"
+    image:
+      # Make sure that registry name end with a '/'.
+      # For example : quay.io/ is a correct value here and quay.io is incorrect
+      registry: ${registry_k8s}/ # default registry.k8s.io/
+      repository: sig-storage/livenessprobe
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: v2.10.0
+
+defaultPolicy:
+  # Name of the default default JivaVolumePolicy
+  name: openebs-jiva-default-policy
+  # If true, enables creation of the openebs-jiva-default-policy JivaVolumePolicy
+  enabled: true
+  # replicaSC represents the storage class used for creating
+  # the pvc for the replica sts provisioned by localpv provisioner
+  replicaSC: openebs-hostpath
+  # replicas represent the desired replication factor for the jiva volume
+  replicas: 1
+
+localpv-provisioner:
+  hostpathClass:
+    basePath: "/mnt"
+    isDefaultClass: true

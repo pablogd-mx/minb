@@ -1,0 +1,10 @@
+# Default values for minio-operator.
+operator:
+  image:
+    repository: ${registry_quay}/minio/operator # default quay.io/minio/operator
+console:
+  image:
+    repository: ${registry_quay}/minio/operator # default quay.io/minio/operator
+  ingress:
+    enabled: true
+    host: minio.${domain}

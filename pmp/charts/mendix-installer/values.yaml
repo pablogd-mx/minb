@@ -1,0 +1,30 @@
+
+namespace: pmp
+mxpcPath: https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli
+mendixOperatorVersion: 2.14.1
+image: bitnami/kubectl:1.28.2
+database_plan:
+  name: pmp-db
+  host: pmp-rw.cnpg-system
+  user: postgres
+  password: dbDdM5BOfeRdzahqCjOLpbAVllEL3LMhja2VW7P2Nsbg04F7ehZZrbJ2jBYcp3YP
+  db_name: postgres
+  db_type: POSTGRESQL
+
+storage_plan:
+  name: pmp-file
+  endpoint: http://minio.minio-tenant.svc.cluster.local
+  accesskey: minio
+  secretkey: minio123
+
+ingress:
+  enable_tls: false
+  domainName: mendix.mxplatform.net
+  tls_secret: pmp-tls
+
+registry:
+  url: mendix.tencentcloudcr.com/mendix-app
+  registry_name: mxapp
+  enable_auth: true
+  auth_user: "100015374583"
+  auth_password: ""

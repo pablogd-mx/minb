@@ -1,0 +1,30 @@
+namespace: ${namespace}
+mxpcPath: ${mxpcPath}
+mendixOperatorVersion: ${mendixOperatorVersion}
+image: bitnami/kubectl:1.28.2
+database_plan:
+  name: pmp-db
+  host: ${db_host}
+  user: ${db_user}
+  password: ${db_password}
+  db_name: postgres
+  db_type: POSTGRESQL
+
+storage_plan:
+  name: pmp-file
+  endpoint: ${storage_endpoint}
+  accesskey: ${storage_accesskey}
+  secretkey: ${storage_secretkey}
+
+ingress:
+  enable_tls: true
+  domainName: ${ingress_domain}
+  tls_secret: pmp-tls
+
+registry:
+  url: ${registry_url}
+  registry_name: ${registry_name}
+  enable_auth: true
+  auth_user: "${registry_user}"
+  auth_password: "${registry_password}"
+

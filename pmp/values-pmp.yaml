@@ -1,0 +1,186 @@
+databaseServicePlan: pmp-db
+storageServicePlan: pmp-file
+mendixRuntimeVersion: 9.18.3.58938
+sourceURL: ${sourceURL}
+resources:
+  limits:
+    cpu: 1
+    memory: 2Gi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+mxAdminPassword: ${mxAdminPassword}
+scheduledEventExecution: ALL
+microflowConstants:
+  API_Publish_DesktopModeler.LogNode: Cloud Service
+  ATM_Commons.CleanupIntegrationCallsInDays: "0"
+  ATM_Commons.CleanupUnconfirmedUserInDays: "365"
+  ATM_Commons.ClientId: ""
+  ATM_Commons.ClientSecret: ""
+  ATM_Commons.DeploymentURL: ""
+  ATM_Commons.Environment: T
+  ATM_Commons.MxID3Url: ""
+  ATM_Commons.PrivateCloudUrl: ""
+  ATM_Commons.StudioLocation: ""
+  ATM_Commons.UseEmailPrefixForUUID: "True"
+  ATM_Main.MetricName_FailedAppIntegration: appintegration.failed.metric
+  ATM_Main.MetricName_ProjectDelete: projects.deleted.metric
+  ATM_Main.MetricName_ProjectNew: projects.created.metric
+  ATM_Main.MetricName_UserNew: users.created.metric
+  ATM_Main.OpenIDPrefix: ""
+  ATM_Main.RetryAmount_AsyncAppIntegration: "5"
+  Administration.EnableMendixSSOUserMigration: "False"
+  AppStore_InIDE.EnableAuth: "False"
+  AppStore_InIDE.InIDE_AuthClientID: studio-pro-v9
+  AppStore_InIDE.MarketplaceURL: http://localhost:8080
+  AppStore_Main.ATM_URL: ""
+  AppStore_Main.CreateNewAppCategory: Create New App
+  AppStore_Main.LoginRequired: "True"
+  AppStore_PackagesAPI.FileNameRegex: ^[\w-\.]+$
+  BitbucketIntegration.USER_DEFAULT_PWD: o5HIEkBU94MG
+  Common.PCLM_ENABLE: "False"
+  Common.PCLM_ENDPOINT: http://mx-privatecloud-license-manager
+  Common.PCLM_PASSWORD: ""
+  Common.PCLM_USERNAME: administrator
+  Common.PlatformVersion: 1.4.2.a741c7ab
+  CommunityCommons.MergeMultiplePdfs_MaxAtOnce: "10"
+  DataProvisioning.DefaultDataProjectName: fortify
+  DataProvisioning.EncryptionKey: ""
+  DataProvisioning.EncryptionPrefix: '{AES2}'
+  DeepLink.EnableLeadingSlash: "True"
+  DeepLink.IndexPage: index.html
+  DeepLink.LoginLocation: ""
+  DeepLink.RequestHandlerName: link
+  DeepLink.SSOHandlerLocation: ""
+  EmailTemplate.EmailAddressSeparator: ','
+  EmailTemplate.EmailLogRetention: "30"
+  EmailTemplate.EmailRetention: "30"
+  EmailTemplate.LogNode: Email
+  EmailTemplate.OAuthCallbackPath: callback_et/
+  EmailTemplate.OAuthSignInPath: signin_et/
+  EmailTemplate.SendingEnabled: "True"
+  EmailTemplate.azure_emailServerHostURL: smtp.office365.com
+  Encryption.EncryptionKey: 123456!Abcdfeafe}45efa7sdfaefaef
+  Encryption.EncryptionPrefix: '{AES3}'
+  Encryption.LegacyEncryptionKey: ""
+  Encryption.LogNode: Encryption
+  Event.UseEventTypeFromResource: "false"
+  ExcelImporter.EnableExternalEntities: "False"
+  ExcelImporter.ParseEmptyCells: "False"
+  Feedback_APIv3.MaxLength_IssueDescription: "128000"
+  Feedback_APIv3.MaxLength_IssueSubmitterDisplayName: "200"
+  Feedback_APIv3.MaxLength_IssueSubmitterEmail: "200"
+  Feedback_APIv3.MaxLength_IssueTitle: "200"
+  Feedback_APIv3.MaxLength_MetadataLocation: "400"
+  Feedback_APIv3.MaxLength_MetadataUserAgent: "400"
+  Feedback_APIv3.MaxLength_MetadataUserRoles: "400"
+  Feedback_Issues.FeedbackDisabled: "False"
+  Feedback_Issues.MaxDescriptionLength: "128000"
+  Feedback_MsgThrds.MaxDraft_MessageLength: "128000"
+  GithubIntegration.Api_Path: api/v3
+  GithubIntegration.Log_Node: GithubIntegratioin
+  ImageCrop.ImageCrop_Version: 4.0.3
+  JWT.LOGNODE: JWT
+  Jenkins.LogNode: CICD
+  JiraConnector.TimeOut: "30"
+  JiraConnector.TokenEncryptionKey: Abcd1234aBCD4321
+  LogNodes.InIDELogNodeName: InIDE
+  LogNodes.InIDEStudioProTestVersion: 9.0.3
+  LogNodes.MxID3: MxID3
+  LogNodes.PackagesAPI: PackagesAPI
+  LogNodes.ProfileServiceIntegration: ProfileServiceIntegration
+  LogNodes.UserGroupsAPI: UserGroupsAPI
+  Logging.EnableJsonLoggingForDD: "false"
+  Logging.Environment: test
+  Logging.HttpResponseMaxLogSize: "2048"
+  Logging.LogLevel: INFO
+  Logging.Service: webhook
+  MarketPlaceSync.PandaMarketplaceCDN: https://mendix-private-platform.s3.eu-central-1.amazonaws.com/release/marketplace/Marketplace-1.0
+  MendixSSO.AuthRequestExpiryDurationInMinutes: "60"
+  MendixSSO.BatchSize: "10000"
+  MendixSSO.ConsentToDeleteIncompatibleUsers: "False"
+  MendixSSO.EncryptionPrefix: '{AES2}'
+  MendixSSO.EnvironmentPassword: ""
+  MendixSSO.EnvironmentUUID: ""
+  MendixSSO.IndexPage: /index.html
+  MendixSSO.LogNode: MendixSSO
+  MendixSSO.MxID2_OpenIDPrefix: ""
+  MendixSSO.OpenIdConnectDiscoveryPath: .well-known/openid-configuration
+  MendixSSO.OpenIdConnectProvider: https://sso.mendix.com
+  MendixSSO.OpenIdConnectScopes: openid mx:user:profile:v1:read offline_access
+  MendixSSO.RolesLocation: https://roles.mendix.com
+  MendixSSO.SSOEnabled: "False"
+  MendixSSO.SignupHint: ""
+  MendixSSO.SilentAuthentication: "False"
+  MendixSSO.SupportEmail: support@mendix.com
+  MendixSSO.SupportEmailSubject: SSO Error
+  MendixSSO.TokenEncryptionKey: ""
+  MendixSSO.TokenExpiryInSeconds: "2592000"
+  MendixSSO.TokenValidatorMaxClockSkew: "60"
+  MendixSSO.TryAgainText: Home
+  MendixSSO.Version: 3.0.0
+  MxDock.AWS_ApiGateway_BaseUrl: ""
+  MxDock.AWS_Rest_UserBehavior_Path: /user-behavior
+  MxDock.AWS_Rest_UserBehavior_SessionPath: /user-behavior
+  MxDock.AWS_Rest_UserBehavior_UserIdPath: /v1/user-behavior
+  MxDock.AWS_Rest_UserPreferences_Path: /user-preferences
+  MxDock.AppName: My app
+  MxDock.AppName_Subtitle: ""
+  MxDock.CDN_HostnameOverwrite: ""
+  MxDock.ClientId: ""
+  MxDock.ClientSecret: ""
+  MxDock.HideSearch: "True"
+  MxDock.MxID3Location: ""
+  MxDock.MxID3TokenExpireTolerance: "30"
+  MxDock.MxNotification_CompanyId: ""
+  MxDock.MxNotificationApi_BaseUrl: ""
+  MxDock.MxRecentProjectsApi_BaseUrl: ""
+  MxDock.NavigationItems_JSON_URL: ""
+  NanoflowCommons.Nanoflow_Commons_Version: 2.1.0
+  OIDC.LogNode: OIDC
+  OIDC.MobileURLScheme: makeitnative
+  OIDCBroker.LogNode: '''OIDCBroker'''
+  OIDCBroker.StudioProCallbackUrl: http://localhost:8100/auth/callback
+  OIDCBroker.StudioProClientID: studio-pro-v9
+  OIDCBroker.StudioProScopes: mx:app:create,mx:assist:mars:v1openid,mx:datahub:services:read,mx:dm:v1,mx:modelrepository:read,mx:modelrepository:write,mx:user:profile:v1:read,offline_access,openid
+  OpenIDConnectProvider.Access_Token_Lifetime_In_Secs: "86400"
+  OpenIDConnectProvider.CommonData_LogNode: CommonData Log Node
+  OpenIDConnectProvider.CommonData_OQBillingLogNode: OQBillingLogNode
+  OpenIDConnectProvider.CommonDataURL: ""
+  OpenIDConnectProvider.CustomRedirectLogicMicroflow: UserManagement.SSORedirectCustomLogic
+  OpenIDConnectProvider.Environment: Development
+  OpenIDConnectProvider.LegacyURL: ""
+  OpenIDConnectProvider.LoginLocation: rest/startoidc/v1/start?idp=gitlab&return=
+  OpenIDConnectProvider.MultiSystemLoginPassword: multi-system-password
+  OpenIDConnectProvider.MultiSystemLoginSessionValidationPassword: multiSystemPassword
+  OpenIDConnectProvider.MultiSystemLoginSessionValidationURL: http://local-veriforce.com:8080/api/v1/multiSystemLoginSession/
+  OpenIDConnectProvider.MultiSystemLoginSessionValidationUserName: multiSystemUser
+  OpenIDConnectProvider.MultiSystemLoginURL: http://vagrant/multi-system-login/validdate-session
+  OpenIDConnectProvider.MultiSystemLoginUsername: multi-system-login
+  OpenIDConnectProvider.OQBilling_Switch: "False"
+  OpenIDConnectProvider.SSOBridgePassword: bridge
+  OpenIDConnectProvider.SSOBridgeURL: http://vagrant/sso-bridge/api/bridge/%s
+  OpenIDConnectProvider.SSOBridgeUsername: bridge
+  PackageStore.LogNode: PackageStore
+  RestUtils.EmailRegEx: \w+((-|\+|\.)\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+
+  RestUtils.UUIDRegEx: '[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}'
+  SAML20.BindingURI_Redirect: "False"
+  SAML20.DefaultLoginPage: ' '
+  SAML20.DefaultLogoutPage: /SSO/
+  SAML20.KeystorePassword: R@nd0mP4$$w0rdFOrK3ySt0r3
+  SAML20.SSOLandingPage: index.html
+  SvixClient.AppNamePrefix: mxapp_
+  SvixClient.Endpoint: http://svix-backend:8071
+  SvixClient.EndpointNamePrefix: mxep_
+  SvixClient.JwtSecret: 8KjzRXrKkd9YFcNyqLSIY8JwiaCeRc6WK4UkMnSW
+  SvixClient.JwtTokenExpiryInMinutes: "15"
+  SvixClient.JwtTokenSub: org_23rb8YdGqMT0qIzpgGwdXfHirMu
+  SvixClient.SecretPrefix: whsec_
+  UserAdmin.RequireApproval: "False"
+  UserAdmin.RequiredEmailVerify: "False"
+  UserAdmin.SpecialCharacterRegex: .*[!"#$%&''()*+,-./:;<=>?@^_`{|}~].*
+  UserGroupsAPI.GroupNameRegex: ^[\w-][\w- ]+$
+  WebActions.WebActions_Version: 2.4.0
+  Webhook.MaxFetchRetry: "10"
+  Webhook.PlatformSvixProjectId: mpp-platform
+  Webhook.StatusCheckDelayInMilliseconds: "5000"

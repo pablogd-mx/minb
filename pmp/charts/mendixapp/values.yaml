@@ -1,0 +1,35 @@
+databaseServicePlan: dbplan
+storageServicePlan: storageplan
+mendixRuntimeVersion: 7.23.3.48173
+sourceURL: https://example.com/example-app.mda
+appURL:
+tls:
+replicas: 1
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+runtimeDeploymentPodAnnotations:
+serviceAnnotations:
+endpointAnnotations:
+mxAdminPassword: Welc0me!
+debuggerPassword: Welc0me!
+dtapMode: P
+logAutosubscribeLevel:
+logLevels:
+microflowConstants:
+scheduledEventExecution: # Optional, can be omitted: specify which scheduled events should be enabled: ALL/NONE/SPECIFIED
+myScheduledEvents:
+jettyOptions: |-
+  {
+    "max_form_content_size": 10485760,
+    "use_blocking_connector": false
+  }
+environmentVariables:
+clientCertificates:
+customConfiguration:
+runtimeMetricsConfiguration:
+runtimeLeaderSelection:

@@ -1,0 +1,14 @@
+controller:
+  image:
+    repository: ${registry_quay}/metallb/controller # Default quay.io
+    tag:
+
+# speaker contains configuration specific to the MetalLB speaker
+# daemonset.
+speaker:
+  image:
+    repository: ${registry_quay}/metallb/speaker # Default quay.io
+  frr:
+    image:
+      repository: ${registry_quay}/frrouting/frr # Default quay.io
+      tag: 8.5.2

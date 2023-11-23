@@ -1,0 +1,8 @@
+mendixOperatorVersion = "2.13.0"
+storage_secretkey     = ""
+ingress_domain        = ""
+registry_url          = ""
+registry_name         = ""
+registry_user         = ""
+registry_password     = ""
+mxAdminPassword       = ""

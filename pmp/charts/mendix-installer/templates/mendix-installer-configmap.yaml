@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mxpc-cli-installer-script
+  namespace: {{ .Values.namespace }}
+data:
+  mxpc-cli-installer-script: | 
+    #/bin/sh
+    ./mxpc-cli base-install --namespace {{ .Values.namespace }} --clusterMode standalone --clusterType generic;
+    ./mxpc-cli apply-config --file /mendix-installer-config-file/mendix-installer-config-file;
+    {{- if and .Values.ingress.enable_tls .Values.ingress.tls_secret }}
+    kubectl -n {{ .Values.namespace }} patch OperatorConfiguration mendix-operator-configuration --type merge --patch '{"spec":{"endpoint":{"ingress":{"tlsSecretName":"{{ .Values.ingress.tls_secret }}"}}}}'
+    {{- end }}
