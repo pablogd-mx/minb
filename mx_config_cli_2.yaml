@@ -1,5 +1,5 @@
 namespace: pmp-ns-1
-cluster_mode: standalone
+cluster_mode: connected
 mask:
   database_plan: true
   storage_plan: true

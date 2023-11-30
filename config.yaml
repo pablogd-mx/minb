@@ -1,0 +1,42 @@
+# Common Configuration
+registry_docker: "mendix.tencentcloudcr.com/talos" #docker.io
+registry_quay: "mendix.tencentcloudcr.com/talos" #quay.io
+registry_gcr: "mendix.tencentcloudcr.com/talos" #gcr.io
+registry_ghcr: "mendix.tencentcloudcr.com/talos" #ghcr.io
+registry_k8s: "mendix.tencentcloudcr.com/talos" #registry.k8s.io
+registry_privatecloud: private-cloud.registry.mendix.com
+domain: "mendix.mxplatform.net"
+
+# Talos Configuration
+talos_version: "v1.5.0"
+cluster_name:  "mx-pmp"
+mirror: "" #"http://101.32.204.76:6000/"
+allowSchedulingOnControlPlanes:  false
+node_data:
+  controlplanes:
+    - hostname: "master-1"
+      ip: 139.24.217.53
+  workers:
+    - hostname: "worker-1"
+      ip: 139.24.217.207
+    - hostname: "worker-2"
+      ip: 139.24.217.146
+
+# Certificate
+certificate_validity_hours: 87600  # 10 years
+
+# Kubernetes Components
+lbaddress: "139.24.217.99/32"
+
+# Private Mendix Platform
+namespace: "pmp"
+mxpcPath: "https://cdn.mendix.com/mendix-for-private-cloud/mxpc-cli" # /mxpc-cli-2.13.0-linux-amd64.tar.gz
+mendixOperatorVersion: "2.13.0"
+storage_secretkey: "miniO123"
+registry_url: "mendix.tencentcloudcr.com/mendix-app"
+registry_name: "mxapp"
+registry_user: "100015374583"
+registry_password: ""
+mxAdminPassword: "Abcd1234...."
+#sourceURL: "oci-image://public.ecr.aws/p2w4x6l6/mendix-private-platform:1.4.2.a741c7ab"
+sourceURL: "oci-image://mendix.tencentcloudcr.com/mendix/mendix-private-platform:1.4.2.a741c7ab"

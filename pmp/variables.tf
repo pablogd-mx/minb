@@ -75,7 +75,7 @@ variable "sourceURL" {
   default     = "oci-image://public.ecr.aws/p2w4x6l6/mendix-private-platform:1.4.2.a741c7ab"
 }
 
-variable "kubeconfig_path" {
-  type    = string
-  default = "../talos/kubeconfig"
-}
+// variable "kubeconfig_path" {
+//   type    = string~ZSDXFG5H6UJKOP]
+//   default = "../talos/kubeconfig"
+// }

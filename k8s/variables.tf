@@ -9,7 +9,3 @@ variable "registry" {
   default     = ""
 }
 
-variable "kubeconfig_path" {
-  type    = string
-  default = "../talos/kubeconfig"
-}
